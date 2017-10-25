@@ -44,7 +44,7 @@ public class Client {
             String answer = pipe(GETJSON);
             parseMessages(answer);
         } else {
-            throw new ClientIsNotInit("You have not done WhatsApp.init()");
+            throw new ClientIsNotInit("You have not done Client.init()");
         }
 
     }
@@ -61,7 +61,7 @@ public class Client {
             String sendJSON = "{\"action\":\"send\",\"to\":\"" + to + "\",\"message\":\"" + message + "\"}";
             pipe(sendJSON);
         } else {
-            throw new ClientIsNotInit("You have not done WhatsApp.init()");
+            throw new ClientIsNotInit("You have not done Client.init()");
         }
     }
 
